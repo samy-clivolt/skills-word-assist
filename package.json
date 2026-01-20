@@ -16,13 +16,14 @@
     "prepublishOnly": "npm run build"
   },
   "keywords": [
+    "cli",
     "agent-skills",
+    "skills",
     "ai-agents",
     "amp",
     "antigravity",
-    "clawdbot",
     "claude-code",
-    "cli",
+    "clawdbot",
     "codex",
     "cursor",
     "droid",
@@ -33,7 +34,6 @@
     "kiro-cli",
     "opencode",
     "roo",
-    "skills",
     "trae",
     "windsurf"
   ],

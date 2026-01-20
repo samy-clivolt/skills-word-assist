@@ -153,9 +153,10 @@ The CLI searches for skills in these locations within a repository:
 - `skills/.curated/`
 - `skills/.experimental/`
 - `skills/.system/`
-- `.agent/skills/`
 - `.agents/skills/`
+- `.agent/skills/`
 - `.claude/skills/`
+- `./skills/`
 - `.codex/skills/`
 - `.cursor/skills/`
 - `.factory/skills/`
