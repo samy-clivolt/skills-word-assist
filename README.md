@@ -357,6 +357,29 @@ The CLI searches for skills in these locations within a repository:
 
 If no skills are found in standard locations, a recursive search is performed.
 
+## Registre prive (GitHub Pages / Vercel)
+
+You can host a minimal private registry UI from this repo using GitHub Pages or Vercel.
+
+1. Put your skills under `skills/`.
+2. Generate the registry index and ZIP artifacts:
+
+```bash
+SKILLS_REGISTRY_BASE_URL="https://your-registry.example.com" pnpm build:registry
+```
+
+This creates:
+- `docs/skills.json`
+- `docs/zips/<skill-name>.zip` (used by installers via `zipUrl`)
+
+For GitHub Pages: Settings -> Pages -> Source: `main` / `/docs`
+
+To preview locally:
+
+```bash
+python3 -m http.server --directory docs 4173
+```
+
 ## Compatibility
 
 Skills are generally compatible across agents since they follow a

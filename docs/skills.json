@@ -1,0 +1,54 @@
+{
+  "generatedAt": "2026-01-31T16:33:46.715Z",
+  "skills": [
+    {
+      "name": "achats-fournisseurs",
+      "description": "Structure un processus d'achat fournisseur avec evaluation, appels d'offres, et selection.",
+      "path": "skills/achats-fournisseurs/SKILL.md",
+      "folder": "achats-fournisseurs",
+      "zipUrl": "https://skills-word-assist-ey2fpmswr-clivolts-projects.vercel.app/zips/achats-fournisseurs.zip"
+    },
+    {
+      "name": "acheteur-negociation",
+      "description": "Guide une negotiation fournisseur (objectifs, concessions, et plan d'entretien) pour acheteurs.",
+      "path": "skills/acheteur-negociation/SKILL.md",
+      "folder": "acheteur-negociation",
+      "zipUrl": "https://skills-word-assist-ey2fpmswr-clivolts-projects.vercel.app/zips/acheteur-negociation.zip"
+    },
+    {
+      "name": "analyse-depenses",
+      "description": "Analyse les depenses achats pour identifier des economies et priorites.",
+      "path": "skills/analyse-depenses/SKILL.md",
+      "folder": "analyse-depenses",
+      "zipUrl": "https://skills-word-assist-ey2fpmswr-clivolts-projects.vercel.app/zips/analyse-depenses.zip"
+    },
+    {
+      "name": "find-skills",
+      "description": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "path": "skills/find-skills/SKILL.md",
+      "folder": "find-skills",
+      "zipUrl": "https://skills-word-assist-ey2fpmswr-clivolts-projects.vercel.app/zips/find-skills.zip"
+    },
+    {
+      "name": "hello-skill",
+      "description": "Skill de test minimal pour valider le registre.",
+      "path": "skills/hello-skill/SKILL.md",
+      "folder": "hello-skill",
+      "zipUrl": "https://skills-word-assist-ey2fpmswr-clivolts-projects.vercel.app/zips/hello-skill.zip"
+    },
+    {
+      "name": "ops-checklist",
+      "description": "Checklist ops simple pour validations rapides.",
+      "path": "skills/ops/checklist/SKILL.md",
+      "folder": "ops/checklist",
+      "zipUrl": "https://skills-word-assist-ey2fpmswr-clivolts-projects.vercel.app/zips/ops-checklist.zip"
+    },
+    {
+      "name": "summary-helper",
+      "description": "Resume un document ou une reunion en points actionnables.",
+      "path": "skills/doc/summary-helper/SKILL.md",
+      "folder": "doc/summary-helper",
+      "zipUrl": "https://skills-word-assist-ey2fpmswr-clivolts-projects.vercel.app/zips/summary-helper.zip"
+    }
+  ]
+}

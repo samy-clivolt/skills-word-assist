@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skills Registry</title>
+    <meta name="description" content="Registre prive de skills pour agents IA." />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="brand">
+          <div class="logo">SKILLS</div>
+          <div class="subtitle">Registre prive</div>
+        </div>
+        <a class="link" href="./skills.json" target="_blank" rel="noreferrer">JSON</a>
+      </header>
+
+      <section class="hero">
+        <h1>Skills pour agents IA</h1>
+        <p>
+          Installe les skills depuis ce registre avec
+          <code>npx skills add &lt;owner/repo&gt;</code>.
+        </p>
+        <div class="search">
+          <input id="search" type="search" placeholder="Rechercher un skill..." />
+          <span id="count" class="count">0</span>
+        </div>
+      </section>
+
+      <section class="list">
+        <div class="list-header">
+          <span>Skill</span>
+          <span>Description</span>
+          <span>Dossier</span>
+        </div>
+        <div id="skill-list" class="list-body"></div>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
