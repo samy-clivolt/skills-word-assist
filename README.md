@@ -1,34 +1,34 @@
-# skills
+# skills-word-assist
 
-The CLI for the open agent skills ecosystem.
+Private skills registry and CLI helpers for Word Assist.
 
 <!-- agent-list:start -->
 Supports **OpenCode**, **Claude Code**, **Codex**, **Cursor**, and [36 more](#supported-agents).
 <!-- agent-list:end -->
 
-## Install a Skill
+## Install a Skill (from this registry)
 
 ```bash
-npx skills add vercel-labs/agent-skills
+npx skills add samy-clivolt/skills-word-assist
 ```
 
 ### Source Formats
 
 ```bash
 # GitHub shorthand (owner/repo)
-npx skills add vercel-labs/agent-skills
+npx skills add samy-clivolt/skills-word-assist
 
 # Full GitHub URL
-npx skills add https://github.com/vercel-labs/agent-skills
+npx skills add https://github.com/samy-clivolt/skills-word-assist
 
 # Direct path to a skill in a repo
-npx skills add https://github.com/vercel-labs/agent-skills/tree/main/skills/web-design-guidelines
+npx skills add https://github.com/samy-clivolt/skills-word-assist/tree/main/skills/hello-skill
 
 # GitLab URL
 npx skills add https://gitlab.com/org/repo
 
 # Any git URL
-npx skills add git@github.com:vercel-labs/agent-skills.git
+npx skills add git@github.com:samy-clivolt/skills-word-assist.git
 
 # Local path
 npx skills add ./my-local-skills
@@ -48,29 +48,29 @@ npx skills add ./my-local-skills
 ### Examples
 
 ```bash
-# List skills in a repository
-npx skills add vercel-labs/agent-skills --list
+# List skills in this repository
+npx skills add samy-clivolt/skills-word-assist --list
 
 # Install specific skills
-npx skills add vercel-labs/agent-skills --skill frontend-design --skill skill-creator
+npx skills add samy-clivolt/skills-word-assist --skill hello-skill --skill ops-checklist
 
 # Install a skill with spaces in the name (must be quoted)
 npx skills add owner/repo --skill "Convex Best Practices"
 
 # Install to specific agents
-npx skills add vercel-labs/agent-skills -a claude-code -a opencode
+npx skills add samy-clivolt/skills-word-assist -a claude-code -a opencode
 
 # Non-interactive installation (CI/CD friendly)
-npx skills add vercel-labs/agent-skills --skill frontend-design -g -a claude-code -y
+npx skills add samy-clivolt/skills-word-assist --skill hello-skill -g -a claude-code -y
 
-# Install all skills from a repo to all agents
-npx skills add vercel-labs/agent-skills --all
+# Install all skills from this repo to all agents
+npx skills add samy-clivolt/skills-word-assist --all
 
 # Install all skills to specific agents
-npx skills add vercel-labs/agent-skills --skill '*' -a claude-code
+npx skills add samy-clivolt/skills-word-assist --skill '*' -a claude-code
 
 # Install specific skills to all agents
-npx skills add vercel-labs/agent-skills --agent '*' --skill frontend-design
+npx skills add samy-clivolt/skills-word-assist --agent '*' --skill hello-skill
 ```
 
 ### Installation Scope
@@ -117,7 +117,7 @@ npx skills ls -a claude-code -a cursor
 
 ### `skills find`
 
-Search for skills interactively or by keyword.
+Search for skills in the public directory (skills.sh). This does not query this private registry.
 
 ```bash
 # Interactive search (fzf-style)
@@ -199,7 +199,7 @@ Skills let agents perform specialized tasks like:
 - Creating PRs following your team's conventions
 - Integrating with external tools (Linear, Notion, etc.)
 
-Discover skills at **[skills.sh](https://skills.sh)**
+Registry UI: **https://skills-word-assist.vercel.app**
 
 ## Supported Agents
 
@@ -359,13 +359,13 @@ If no skills are found in standard locations, a recursive search is performed.
 
 ## Registre prive (GitHub Pages / Vercel)
 
-You can host a minimal private registry UI from this repo using GitHub Pages or Vercel.
+You can host a minimal registry UI from this repo using GitHub Pages or Vercel.
 
 1. Put your skills under `skills/`.
 2. Generate the registry index and ZIP artifacts:
 
 ```bash
-SKILLS_REGISTRY_BASE_URL="https://your-registry.example.com" pnpm build:registry
+SKILLS_REGISTRY_BASE_URL="https://skills-word-assist.vercel.app" pnpm build:registry
 ```
 
 This creates:
@@ -373,6 +373,7 @@ This creates:
 - `docs/zips/<skill-name>.zip` (used by installers via `zipUrl`)
 
 For GitHub Pages: Settings -> Pages -> Source: `main` / `/docs`
+For Vercel: deploy the `docs/` folder.
 
 To preview locally:
 
